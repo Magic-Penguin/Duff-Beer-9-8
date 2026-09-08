@@ -1,0 +1,15 @@
+:root {
+  --surface: #061016;
+  --line: #0b1f29;
+  --ink: #edf8fb;
+  --signal: #59ddff;
+}
+
+.report-shell {
+  width: min(72rem, calc(100% - 2rem));
+  margin: 0 auto;
+
+body {
+  background-color: lightblue;
+}
+}
