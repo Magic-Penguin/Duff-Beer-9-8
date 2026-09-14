@@ -1,15 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> My Story</title>
-    <link rel="link" href="styles.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive iceberg investigation into the Duff Beer mystery.">
+  <title>The Duff Beer Iceberg</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+  <div class="ocean-noise"></div>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">ICE</span><span>THE DUFF DOSSIER</span></div>
+    <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">◉ AMBIENT: OFF</button>
+  </header>
 
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CASE FILE 09-8 / CLASSIFIED</p>
+      <h1>The <span>Iceberg</span></h1>
+      <p class="hero-copy">What everyone knows is only the surface. Scroll downward and uncover what lies beneath.</p>
+      <div class="scroll-cue"><span></span> DESCEND</div>
+    </section>
 
-<article class="scene is-active">
-  <p class="scene-number">Recovered evidence 01</p>
-  <h2>The first discovery</h2>
-  <img src="images/discovery-01.jpg" alt="Describe the evidence shown">
-  <p>Write what the expedition found here.</p>
-</article>
+    <section class="iceberg-section" aria-label="Interactive iceberg levels">
+      <div class="depth-meter" aria-hidden="true"><span>0 M</span><i></i><span>UNKNOWN</span></div>
+      <div class="waterline"><span>THE SURFACE</span></div>
+      <div class="iceberg" aria-hidden="true"><div class="iceberg-top"></div><div class="iceberg-below"></div></div>
+
+      <div class="levels">
+        <article class="level surface-level"><button class="level-card" data-level="1" type="button"><span class="level-number">01</span><span class="level-title">Surface Facts</span><span class="level-hint">What everybody already knows →</span></button></article>
+        <article class="level"><button class="level-card" data-level="2" type="button"><span class="level-number">02</span><span class="level-title">Strange Details</span><span class="level-hint">Things that don't quite add up →</span></button></article>
+        <article class="level"><button class="level-card" data-level="3" type="button"><span class="level-number">03</span><span class="level-title">Buried Records</span><span class="level-hint">Old reports and forgotten stories →</span></button></article>
+        <article class="level deep-level"><button class="level-card" data-level="4" type="button"><span class="level-number">04</span><span class="level-title">The Deep</span><span class="level-hint">Information that was never meant to surface →</span></button></article>
+        <article class="level abyss-level"><button class="level-card" data-level="5" type="button"><span class="level-number">05</span><span class="level-title">UNKNOWN</span><span class="level-hint">You found the bottom. Or did you? →</span></button></article>
+      </div>
+    </section>
+
+    <section class="briefing">
+      <p class="eyebrow">INVESTIGATOR'S NOTE</p>
+      <h2>Every iceberg has a deeper story.</h2>
+      <p>Start at the top. Follow the evidence. Decide for yourself what is fact, what is rumor, and what has been deliberately buried.</p>
+    </section>
+  </main>
+
+  <div class="modal" id="levelModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <section class="evidence-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-modal" type="button" data-close aria-label="Close evidence">×</button>
+      <p class="eyebrow" id="modalNumber">EVIDENCE 01</p>
+      <h2 id="modalTitle">Surface Facts</h2>
+      <div class="evidence-line"></div>
+      <p id="modalText"></p>
+      <div class="evidence-stamp">CASE 09-8</div>
+    </section>
+  </div>
+
+  <footer><span>THE DUFF DOSSIER</span><span>DESCEND WITH CAUTION</span></footer>
+  <script src="script.js"></script>
+</body>
 </html>
