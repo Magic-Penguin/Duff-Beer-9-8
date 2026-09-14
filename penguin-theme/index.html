@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penguin Discovery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky-glow"></div>
+  <header class="nav">
+    <div class="brand"><span class="dot"></span> PENGUIN DISCOVERY</div>
+    <button id="exploreBtn" class="nav-btn">Begin Expedition</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FIELD JOURNAL 01 · ANTARCTICA</p>
+        <h1>Meet the<br><span>Explorer.</span></h1>
+        <p class="intro">A little penguin. A very big world. Follow the trail and discover what is hiding beyond the horizon.</p>
+        <div class="actions">
+          <button id="discoverBtn" class="primary">Discover More <span>→</span></button>
+          <a href="#journal" class="secondary">Open field notes</a>
+        </div>
+      </div>
+
+      <div class="penguin-stage">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="snow snow-one"></div>
+        <div class="snow snow-two"></div>
+        <img src="../discovery-01.png" alt="Penguin explorer" class="penguin">
+        <div class="location-card"><span>●</span> 78° SOUTH<br><small>UNCHARTED COAST</small></div>
+      </div>
+    </section>
+
+    <section id="journal" class="journal">
+      <div class="section-heading">
+        <p class="eyebrow">FIELD NOTES</p>
+        <h2>Things worth<br><em>discovering.</em></h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="number">01</span>
+          <h3>The Journey</h3>
+          <p>Every expedition starts with one small step into the unknown.</p>
+          <button class="card-btn" data-message="The journey has officially begun.">Explore →</button>
+        </article>
+        <article class="card featured">
+          <span class="number">02</span>
+          <h3>Cold Front</h3>
+          <p>Wind, ice, and endless blue. The landscape is part of the adventure.</p>
+          <button class="card-btn" data-message="Cold front detected. Adventure conditions: excellent.">Explore →</button>
+        </article>
+        <article class="card">
+          <span class="number">03</span>
+          <h3>New Horizons</h3>
+          <p>There is always another ridge, another view, another story.</p>
+          <button class="card-btn" data-message="New horizon unlocked. Keep going.">Explore →</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <footer>BUILT FOR THE CURIOUS · EXPEDITION STATUS: ACTIVE</footer>
+  <script src="script.js"></script>
+</body>
+</html>
